@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 id="title">2020 Reading Survey</h1>
+      <p id="description">
+        Thank you for helping us improve the reading recommendations.
+      </p>
+    </header>
+
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">Name: </label>
+        <input type="text" id="name" required placeholder="enter your name" />
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Email: </label>
+        <input
+          type="email"
+          id="email"
+          required
+          placeholder="enter your email"
+        />
+      </div>
+      <!-- GENDER -->
+
+      <fieldset class="form-group">
+        <legend>What is your gender?</legend>
+        <input
+          class="input-radio"
+          type="radio"
+          id="male"
+          name="gender"
+          value="male"
+        />
+        <label for="male">Male</label><br />
+        <input
+          class="input-radio"
+          type="radio"
+          id="female"
+          name="gender"
+          value="female"
+        />
+        <label for="female">Female</label><br />
+        <input
+          class="input-radio"
+          type="radio"
+          id="other"
+          name="gender"
+          value="other"
+        />
+        <label class="form-input" for="other">Other</label>
+      </fieldset>
+      <!-- AGE -->
+      <fieldset class="form-group">
+        <legend>What is your age range?</legend>
+        <input
+          class="input-radio"
+          type="radio"
+          id="less18"
+          name="age"
+          value="male"
+        />
+        <label for="less18">less than 18</label><br />
+        <input
+          class="input-radio"
+          type="radio"
+          id="age18to25"
+          name="age"
+          value="male"
+        />
+        <label for="age18to25">18 to 25</label><br />
+        <input
+          class="input-radio"
+          type="radio"
+          id="age26to34"
+          name="age"
+          value="female"
+        />
+        <label for="age26to34">26 to 35</label><br />
+        <input
+          class="input-radio"
+          type="radio"
+          id="age36to45"
+          name="age"
+          value="other"
+        />
+        <label for="age36to45">36 to 45</label>
+        <input
+          class="input-radio"
+          type="radio"
+          id="age46to55"
+          name="age"
+          value="other"
+        />
+        <label for="age46to55">46 to 55</label>
+        <input
+          class="input-radio"
+          type="radio"
+          id="age56Plus"
+          name="age"
+          value="other"
+        />
+        <label for="age56Plus">more than 56</label>
+      </fieldset>
+
+      <div class="form-group">
+        <label id="number-label" for="number"
+          >How many books did you read in 2020?
+        </label>
+        <input
+          type="number"
+          id="number"
+          min="1"
+          max="300"
+          required
+          placeholder="enter the number of books"
+        />
+      </div>
+      <div class="form-group">
+        <label for="dropdown">Average Book Length:</label>
+
+        <select name="book-length" id="dropdown">
+          <option value="less-100>"> less than 100 pages </option>
+          <option value="100-200">between 100 and 200 pages </option>
+          <option value="200-300">between 200 and 300 pages</option>
+          <option value="300Plus"> more than 300 pages </option>
+        </select>
+      </div>
+
+      <fieldset class="form-group">
+        <legend>What are Your favorite genres?</legend>
+        <label>
+          <input
+            class="input-checkbox"
+            type="checkbox"
+            name="favorite_genre"
+            value="self-help"
+          />Self Help</label
+        >
+        <label>
+          <input
+            class="input-checkbox"
+            type="checkbox"
+            name="favorite_genre"
+            value="sci-fi"
+          />Science Fiction</label
+        >
+        <label>
+          <input
+            class="input-checkbox"
+            type="checkbox"
+            name="favorite_genre"
+            value="romance"
+          />Romance</label
+        >
+        <label>
+          <input
+            class="input-checkbox"
+            type="checkbox"
+            name="favorite_genre"
+            value="fantasy"
+          />Fantasy</label
+        >
+        <label>
+          <input
+            class="input-checkbox"
+            type="checkbox"
+            name="favorite_genre"
+            value="crime"
+          />Crime</label
+        >
+        <label>
+          <input
+            class="input-checkbox"
+            type="checkbox"
+            name="favorite_genre"
+            value="horror"
+          />Horror</label
+        >
+        <label>
+          <input
+            class="input-checkbox"
+            type="checkbox"
+            name="favorite_genre"
+            value="art"
+          />Art</label
+        >
+        <label>
+          <input
+            class="input-checkbox"
+            type="checkbox"
+            name="favorite_genre"
+            value="history"
+          />History</label
+        >
+
+        <label>
+          <input
+            class="input-checkbox"
+            type="checkbox"
+            name="favorite_genre"
+            value="science"
+          />Science</label
+        >
+        <label>
+          <input
+            class="input-checkbox"
+            type="checkbox"
+            name="favorite_genre"
+            value="non-fiction"
+          />Non Fiction</label
+        >
+      </fieldset>
+
+      <div class="form-group">
+        <label for="textarea"
+          >How can we improve? Please leave your comment. </label
+        ><br />
+        <textarea
+          wrap="hard"
+          id="textarea"
+          name="comments"
+          rows="4"
+          cols="50"
+          placeholder="I think the reading platform can improve..."
+        ></textarea>
+      </div>
+
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
